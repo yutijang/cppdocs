@@ -5,7 +5,7 @@ layout: home
 
 
 ```c++
-{% highlight c++ %}
+{% highlight yaml %}
 #include <iostream>
 int main() {
     int m[3][3];
