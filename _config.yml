@@ -13,4 +13,4 @@ compress_html:
   ignore:
     envs: all
 
-nav_enabled: false
+nav_enabled: true
