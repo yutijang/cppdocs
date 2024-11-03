@@ -3,7 +3,8 @@ title: Home
 layout: home
 ---
 
-<inline code snippet>
+
+    ```c++
 #include <iostream>
 
 int main() {
@@ -21,3 +22,4 @@ int main() {
 
     return 0;
 }
+```
