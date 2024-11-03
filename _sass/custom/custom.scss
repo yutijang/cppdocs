@@ -1,12 +1,8 @@
-.highlight,
-pre.highlight {
-  font-family: "Roboto Mono";
+.language-c++ .highlight code {
   font-size: 1.5rem;
-}
-
-.highlight pre {
-  font-family: "Roboto Mono";
-  font-size: 1.5rem;
+  font-family: "Roboto Mono", Consolas, monospace;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
