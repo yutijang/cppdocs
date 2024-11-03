@@ -4,7 +4,7 @@ layout: home
 ---
 
 
-    ```c++
+```c++
 #include <iostream>
 
 int main() {
