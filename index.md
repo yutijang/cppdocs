@@ -5,7 +5,6 @@ layout: home
 
 
 ```c++
-{% highlight yaml %}
 #include <iostream>
 int main() {
     int m[3][3];
@@ -18,7 +17,6 @@ int main() {
     std::cout << res;
     return 0;
 }
-{% endhighlight %}
 ```
 
 
