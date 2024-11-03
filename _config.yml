@@ -12,3 +12,5 @@ kramdown:
 compress_html:
   ignore:
     envs: all
+
+nav_enabled: false
