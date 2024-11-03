@@ -4,7 +4,6 @@ layout: home
 ---
 
 ```c++
-{: .fs-5 }
 #include <iostream>
 int main() {
     int m[3][3];
