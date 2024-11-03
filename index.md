@@ -3,6 +3,7 @@ title: Home
 layout: home
 ---
 
+{% highlight c++ %}
 ```c++
 #include <iostream>
 int main() {
@@ -17,6 +18,6 @@ int main() {
     return 0;
 }
 ```
-
+{% endhighlight %}
 
 Test
