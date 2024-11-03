@@ -1,8 +1,13 @@
 .highlight pre, 
-.rouge-code pre {
-font-size: 1.5rem !important;
-font-family: Menlo, "Roboto Mono", monospace;
-line-height: 1.2 !important;
+.rouge-code pre, 
+.rouge-code pre * {
+    font-size: 1.5rem !important;
+    font-family: Menlo, "Roboto Mono", monospace !important;
+  line-height: 1.4 !important;
+}
+.rouge-code td, 
+.rouge-code code {
+    font-size: 1.5rem !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
