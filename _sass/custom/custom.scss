@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto Mono", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10,12 +10,4 @@ body, p {
   font-size: 1rem;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 700
 
-.roboto-mono-gen {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
