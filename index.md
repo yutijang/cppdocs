@@ -3,8 +3,9 @@ title: Home
 layout: home
 ---
 
-{% highlight c++ %}
+
 ```c++
+{% highlight c++ %}
 #include <iostream>
 int main() {
     int m[3][3];
@@ -17,7 +18,8 @@ int main() {
     std::cout << res;
     return 0;
 }
-```
 {% endhighlight %}
+```
+
 
 Test
