@@ -1,6 +1,7 @@
 ---
 title: .clang-format
 layout: default
+nav_order: 1
 ---
 
 Nội dung file `.clang-format` đặt tại thư mục gốc của workspace.
