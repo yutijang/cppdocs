@@ -31,8 +31,7 @@ padding: 0 !important;
     background-color: #f5f2f0 !important;
     border: 1px solid #e8e8e8 !important;
     border-radius: 4px; /* Nếu muốn các góc bo tròn */
-    padding: 10px;
-    user-select: none !important;
+    padding: 10px;    
 }
 
 /* Đặt màu cho line number */
@@ -40,6 +39,7 @@ padding: 0 !important;
     color: #b3b3b3; /* Màu chữ cho line number */
     text-align: right !important;
     background-color: #f5f2f0 !important;
+    user-select: none !important;
 }
 
 /* Thêm đường thẳng ngăn cách giữa line number và khối code */
