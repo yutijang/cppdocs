@@ -9,9 +9,8 @@ email: yutijang@gmail.com
 
 kramdown:
   syntax_highlighter_opts:
-  disable : true
-    #block:
-      #line_numbers: true
+    block:
+      line_numbers: true
 
 compress_html:
    ignore:
