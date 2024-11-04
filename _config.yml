@@ -7,8 +7,9 @@ author: yutijang
 
 kramdown:
   syntax_highlighter_opts:
-    block:
-      line_numbers: true
+  disable : true
+    #block:
+      #line_numbers: true
 
 compress_html:
    ignore:
