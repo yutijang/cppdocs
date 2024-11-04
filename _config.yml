@@ -22,10 +22,14 @@ kramdown:
 
 compress_html:
    blanklines: true
+compress_html:   
    ignore:
      envs: all
 
 nav_enabled: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
 
 plugins:  
   - jekyll-seo-tag
