@@ -3,8 +3,9 @@
 .highlight .table-wrapper pre,
 .rouge-gutter,
 .rouge-code {
-    font-size: 1.2rem !important; /* Kích thước font đồng bộ */
-    line-height: 1.4 !important; /* Khoảng cách dòng đồng bộ */
+    font-family: "Roboto Mono", "SFMono-Regular", menlo, consolas, monospace !important;
+    font-size: 1.1rem !important; /* Kích thước font đồng bộ */
+    line-height: 1.3 !important; /* Khoảng cách dòng đồng bộ */
     font-family: 'Courier New', monospace; /* Font monospace nhất quán */
     margin: 0 !important;
     padding: 0 !important;
