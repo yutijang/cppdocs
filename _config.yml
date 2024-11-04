@@ -51,11 +51,7 @@ callouts:
     title: Warning
     color: red
 
-defaults:
-  scope: {path: "docs/*"}
-  values: {layout: default}
-  scope: {path: "collections/*"}
-  values: {layout: default}  
+heading_anchors: true
 
 collections_dir: collections
 
