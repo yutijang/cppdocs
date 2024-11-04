@@ -47,6 +47,20 @@
     padding-left: 15px; /* Khoảng cách giữa khối code và đường ngăn cách */
 }
 
+/* Đặt màu nền và căn chỉnh cho cột line number */
+.highlight .table-wrapper .rouge-gutter {
+    background-color: #f5f2f0 !important; /* Đồng nhất màu nền với toàn bộ khối code */
+    border-right: 1px solid #e8e8e8 !important; /* Đường phân cách line number và code */
+    color: #b3b3b3; /* Màu chữ cho line number */
+    padding-right: 15px !important;
+}
+
+/* Đặt màu nền và căn chỉnh cho phần code */
+.highlight .table-wrapper .rouge-code {
+    background-color: #f5f2f0 !important; /* Đồng nhất màu nền với toàn bộ khối code */
+    padding-left: 15px !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
 }
