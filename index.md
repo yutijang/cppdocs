@@ -4,7 +4,7 @@ layout: home
 ---
 
 
-```c++
+```cpp
 #include <iostream>
 int main() {
     int m[3][3];
