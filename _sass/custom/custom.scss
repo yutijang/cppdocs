@@ -10,7 +10,7 @@ padding: 0 !important;
     line-height: 1.5 !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: #f5f2f0 !important;
+    background-color: #ECE9E0 !important;
 }
 
 .highlight .table-wrapper {
@@ -28,7 +28,7 @@ padding: 0 !important;
 
 /* Đặt màu nền và viền bao quanh khối code */
 .highlight .table-wrapper {
-    background-color: #f5f2f0 !important;
+    background-color: #ECE9E0 !important;
     border: 1px solid #e8e8e8 !important;
     border-radius: 4px; /* Nếu muốn các góc bo tròn */
     padding: 10px;    
@@ -38,7 +38,7 @@ padding: 0 !important;
 .highlight .table-wrapper .rouge-gutter pre {
     color: #b3b3b3; /* Màu chữ cho line number */
     text-align: right !important;
-    background-color: #f5f2f0 !important;
+    background-color: #ECE9E0 !important;
     user-select: none !important;
 }
 
@@ -55,7 +55,7 @@ padding: 0 !important;
 
 /* Đặt màu nền và căn chỉnh cho cột line number */
 .highlight .table-wrapper .rouge-gutter {
-    background-color: #f5f2f0 !important; /* Đồng nhất màu nền với toàn bộ khối code */
+    background-color: #ECE9E0 !important; /* Đồng nhất màu nền với toàn bộ khối code */
     border-right: 1px solid #e8e8e8 !important; /* Đường phân cách line number và code */
     color: #b3b3b3; /* Màu chữ cho line number */
     padding-right: 15px !important;
@@ -63,14 +63,14 @@ padding: 0 !important;
 
 /* Đặt màu nền và căn chỉnh cho phần code */
 .highlight .table-wrapper .rouge-code {
-    background-color: #f5f2f0 !important; /* Đồng nhất màu nền với toàn bộ khối code */
+    background-color: #ECE9E0 !important; /* Đồng nhất màu nền với toàn bộ khối code */
     padding-left: 15px !important;
 }
 
 div.highlighter-rouge > button {
     width: 1rem !important;
-    border: 0.75rem solid #f5f2f0;
-    background-color: #f5f2f0 !important;
+    border: 0.75rem solid #ECE9E0;
+    background-color: #ECE9E0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
