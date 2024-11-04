@@ -1,5 +1,6 @@
 ---
 title: Nav toggle
+layout: home
 ---
 
 # Accessible titles to page nav toggle
