@@ -12,6 +12,6 @@ layout: home
 1. TOC
 {:toc}
 
-test footer content {: .fs-2 } 
-{: .fs-2 } 
-test footer content
+{: .warning }
+A paragraph...
+
