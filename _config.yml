@@ -54,3 +54,16 @@ callouts:
 defaults:
   scope: {path: "docs/*"}
   values: {layout: default}
+  -
+  scope: {path: "collections/*"}
+  values: {layout: default}  
+
+collections:
+  vscode:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    vscode:
+      name: VSCODE
