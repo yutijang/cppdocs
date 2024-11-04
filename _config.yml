@@ -7,6 +7,10 @@ favicon_ico: "/assets/images/favicon.ico"
 url: https://yutijang.github.io
 baseurl: /cppdocs
 
+nav_error_report: true
+
+permalink: pretty
+
 author: yutijang
 github_username: yutijang
 email: yutijang@gmail.com
@@ -17,6 +21,7 @@ kramdown:
       line_numbers: true
 
 compress_html:
+   blanklines: true
    ignore:
      envs: all
 
