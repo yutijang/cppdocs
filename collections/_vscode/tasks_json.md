@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 ---
 Nội dung file `tasks.json` đặt bên trong thư mục `.vscode` nằm ở thư thu mục gốc của `workspace`.
-```
+```json
 {
     "tasks": [
 //        {
