@@ -1,5 +1,21 @@
+/* Điều chỉnh cho khối code chính */
+.highlight pre, 
+.rouge-code pre, 
+.rouge-code pre * {
+    font-size: 1.1rem !important;
+    font-family: Menlo, "Roboto Mono", monospace !important;
+    line-height: 1.4 !important;
+}
 
-
+/* Điều chỉnh cho cột số dòng */
+.rouge-gutter, 
+.rouge-gutter pre, 
+.rouge-gutter pre *, 
+.lineno {
+    font-size: 1.1rem !important; /* Đồng bộ kích thước với code */
+    font-family: Menlo, "Roboto Mono", monospace !important;
+    line-height: 1.4 !important;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
