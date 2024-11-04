@@ -16,6 +16,4 @@ compress_html:
 nav_enabled: true
 
 plugins:  
-  - jekyll-github-metadata
-  - jekyll-include-cache
-  - jekyll-sitemap
+  - jekyll-seo-tag
