@@ -1,20 +1,14 @@
-/* Điều chỉnh cho khối code chính */
+/* Đồng bộ font và line-height cho khối code và line number */
 .highlight pre, 
 .rouge-code pre, 
-.rouge-code pre * {
-    font-size: 1.1rem !important;
-    font-family: Menlo, "Roboto Mono", monospace !important;
-    line-height: 1.4 !important;
-}
-
-/* Điều chỉnh cho cột số dòng */
+.rouge-code pre *, 
 .rouge-gutter, 
 .rouge-gutter pre, 
 .rouge-gutter pre *, 
 .lineno {
-    font-size: 1.1rem !important; /* Đồng bộ kích thước với code */
-    font-family: Menlo, "Roboto Mono", monospace !important;
-    line-height: 1.4 !important;
+    font-size: $font-size-6 !important;  /* Sử dụng font-size theo file .scss */
+    font-family: $mono-font-family !important;
+    line-height: $body-line-height !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
