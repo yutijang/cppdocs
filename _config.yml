@@ -27,7 +27,7 @@ compress_html:
 nav_enabled: true
 
 back_to_top: true
-back_to_top_text: "⇧Đầu trang⇧"
+back_to_top_text: "Lên đầu trang"
 footer_content: ''
 
 plugins:  
