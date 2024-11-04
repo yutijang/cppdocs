@@ -20,8 +20,6 @@ kramdown:
     block:
       line_numbers: true
 
-compress_html:
-   blanklines: true
 compress_html:   
    ignore:
      envs: all
