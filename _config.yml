@@ -18,3 +18,4 @@ nav_enabled: true
 plugins:  
   - jekyll-seo-tag
   - jekyll-include-cache
+  - jekyll-sitemap
