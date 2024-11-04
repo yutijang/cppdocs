@@ -2,6 +2,8 @@ title: cppdocs
 description: yutijang's archive cpp docs
 theme: just-the-docs
 
+favicon_ico: "/assets/images/favicon.ico"
+
 # url: https://yutijang.github.io/cppdocs
 author: yutijang
 github_username: yutijang
