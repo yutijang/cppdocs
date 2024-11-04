@@ -1,7 +1,6 @@
 ---
 title: About
-layout: default
+layout: home
 nav_order: 2
-has_toc: true
 ---
 test about
