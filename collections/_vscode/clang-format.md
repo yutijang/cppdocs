@@ -1,5 +1,6 @@
 ---
 title: .clang-format
+layout: default
 ---
 
 Nội dung file `.clang-format` đặt tại thư mục gốc của workspace.
