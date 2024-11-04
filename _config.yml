@@ -54,7 +54,6 @@ callouts:
 defaults:
   scope: {path: "docs/*"}
   values: {layout: default}
-  -
   scope: {path: "collections/*"}
   values: {layout: default}  
 
