@@ -19,6 +19,9 @@
 .highlight .table-wrapper td {
     padding-right: 10px !important; /* Khoảng cách giữa line number và code */
     vertical-align: top !important;
+}
+/* Căn lề phải cho cột line number */
+.highlight .table-wrapper .rouge-gutter pre {
     text-align: right !important;
 }
 
