@@ -22,6 +22,31 @@
     text-align: right !important;
 }
 
+/* Đặt màu nền và viền bao quanh khối code */
+.highlight .table-wrapper {
+    background-color: #f5f2f0 !important;
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 4px; /* Nếu muốn các góc bo tròn */
+    padding: 10px;
+}
+
+/* Đặt màu cho line number */
+.highlight .table-wrapper .rouge-gutter pre {
+    color: #b3b3b3; /* Màu chữ cho line number */
+    text-align: right !important;
+}
+
+/* Thêm đường thẳng ngăn cách giữa line number và khối code */
+.highlight .table-wrapper .rouge-gutter {
+    border-right: 1px solid #e8e8e8 !important; /* Đường thẳng ngăn cách */
+    padding-right: 15px !important; /* Khoảng cách giữa line number và đường ngăn cách */
+}
+
+/* Căn chỉnh cho khối code */
+.highlight .table-wrapper .rouge-code pre {
+    padding-left: 15px; /* Khoảng cách giữa khối code và đường ngăn cách */
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
 }
