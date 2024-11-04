@@ -3,7 +3,7 @@ title: cpp.json
 layout: default
 nav_order: 4
 ---
-Snippets template `cppmain` prefix, file `cpp.json` đặt tại `%appdata%\Roaming\Code\User\snippets\`.
+Snippets template `cppmain` prefix, file `cpp.json` đặt tại `"%appdata%\Roaming\Code\User\snippets\"`.
 ```json
 {
 	"C++ Template": {
