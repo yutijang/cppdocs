@@ -13,7 +13,7 @@ Snippets template `cppmain` prefix, file `cpp.json` đặt tại `"%appdata%\Roa
 			"#include <vector>",
 			"",
 			"int main() {",
-			"    std::cout << \"\\\\033c\";",
+			"\tstd::cout << \"\\\\033c\";",
 			"\tstd::cin.sync_with_stdio(0);",
 			"\tstd::cin.tie(0);",
 			"",
