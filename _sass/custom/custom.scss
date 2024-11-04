@@ -10,6 +10,29 @@
     line-height: 1.4 !important;
 }
 
+/* Đảm bảo rằng kích thước font và line-height đồng nhất giữa code và line number */
+.rouge-gutter,
+.rouge-code {
+    font-size: 14px; /* Đặt font-size chung cho cả line number và code */
+    line-height: 1.5; /* Đặt line-height chung để các dòng cách đều nhau */
+    font-family: 'Courier New', monospace; /* Chọn font chữ nhất quán, nên là monospace */
+}
+
+/* Đảm bảo sự căn chỉnh của bảng */
+.rouge-table {
+    border-spacing: 0;
+}
+
+/* Đảm bảo chiều rộng của ô line number khớp với chiều cao của ô code */
+.rouge-gutter pre,
+.rouge-code pre {
+    margin: 0;
+    padding: 0;
+    line-height: inherit; /* Thừa kế line-height để đồng bộ */
+    font-size: inherit; /* Thừa kế font-size để đồng bộ */
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
 }
