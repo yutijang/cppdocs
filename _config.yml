@@ -4,6 +4,8 @@ theme: just-the-docs
 
 # url: https://yutijang.github.io/cppdocs
 author: yutijang
+github_username: yutijang
+email: yutijang@gmail.com
 
 kramdown:
   syntax_highlighter_opts:
@@ -20,3 +22,4 @@ nav_enabled: true
 plugins:  
   - jekyll-seo-tag
   - jekyll-include-cache
+  - jekyll-feed
