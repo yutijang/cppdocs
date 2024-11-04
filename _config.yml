@@ -1,8 +1,9 @@
 title: cppdocs
-description: archive docs
+description: yutijang's archive cpp docs
 theme: just-the-docs
 
-url: https://yutijang.github.io/cppdocs
+# url: https://yutijang.github.io/cppdocs
+author: yutijang
 
 kramdown:
   syntax_highlighter_opts:
@@ -18,4 +19,3 @@ nav_enabled: true
 plugins:  
   - jekyll-seo-tag
   - jekyll-include-cache
-  - jekyll-sitemap
