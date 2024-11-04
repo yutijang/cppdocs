@@ -50,3 +50,11 @@ callouts:
   warning:
     title: Warning
     color: red
+
+defaults:
+  -
+  scope: {path: ""}
+  values: {nav_exclude: true}
+  -
+  scope: {path: "docs/*"}
+  values: {layout: default}
