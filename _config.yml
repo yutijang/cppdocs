@@ -4,7 +4,9 @@ theme: just-the-docs
 
 favicon_ico: "/assets/images/favicon.ico"
 
-# url: https://yutijang.github.io/cppdocs
+url: https://yutijang.github.io
+baseurl: /cppdocs
+
 author: yutijang
 github_username: yutijang
 email: yutijang@gmail.com
