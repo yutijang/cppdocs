@@ -4,7 +4,7 @@
 .rouge-gutter,
 .rouge-code {
     font-family: "Roboto Mono", "SFMono-Regular", menlo, consolas, monospace !important;
-    font-size: 1rem !important; /* Kích thước font đồng bộ */
+    font-size: .9rem !important; /* Kích thước font đồng bộ */
     line-height: 1.4 !important; /* Khoảng cách dòng đồng bộ */
     margin: 0 !important;
     padding: 0 !important;
@@ -19,6 +19,7 @@
 .highlight .table-wrapper td {
     padding-right: 10px !important; /* Khoảng cách giữa line number và code */
     vertical-align: top !important;
+    text-align: right !important;
 }
 
 
