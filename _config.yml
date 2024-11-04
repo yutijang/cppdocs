@@ -10,7 +10,19 @@ kramdown:
       line_numbers: true
 
 compress_html:
-  ignore:
-    envs: all
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+  # ignore:
+  #   envs: all
 
 nav_enabled: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-sitemap
