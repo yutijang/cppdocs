@@ -3,12 +3,11 @@ title: Nav toggle
 layout: home
 ---
 
-# Accessible titles to page nav toggle
+# In-Page Navigation
+{: .no_toc }
 
-1.  Select page [A](../../navigation/grandparent/a/).
+## Table of Contents
+{: .no_toc .text-delta }
 
-1.  Browse the HTML source of the page.
-
-1.  Check that the link to the expander for A has `aria-label="toggle links in A category`.
-
-1.  Check that the link to the expander for C has `aria-label="toggle links in C category`.
+1. TOC
+{:toc}
