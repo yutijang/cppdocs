@@ -1,29 +1,4 @@
-/* Đồng bộ font-size và line-height cho line number và khối code */
-.highlight .table-wrapper td,
-.highlight .table-wrapper pre,
-.rouge-gutter,
-.rouge-code {
-    font-family: "Roboto Mono", "SFMono-Regular", menlo, consolas, monospace !important;
-    font-size: .95rem !important; /* Kích thước font đồng bộ */
-    line-height: 1.5 !important; /* Khoảng cách dòng đồng bộ */
-    margin: 0 !important;
-    padding: 0 !important;
-}
 
-/* Đảm bảo line number và khối code căn chỉnh tốt trong bảng */
-.highlight .table-wrapper {
-    border-spacing: 0 !important;
-}
-
-/* Điều chỉnh khoảng cách trong ô line number */
-.highlight .table-wrapper td {
-    padding-right: 15px !important; /* Khoảng cách giữa line number và code */
-    vertical-align: top !important;
-}
-/* Căn lề phải cho cột line number */
-.highlight .table-wrapper .rouge-gutter pre {
-    text-align: right !important;
-}
 
 
 
