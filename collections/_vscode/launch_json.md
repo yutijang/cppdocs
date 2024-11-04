@@ -3,6 +3,7 @@ title: launch.json
 layout: default
 nav_order: 3
 ---
+Nội dung file `launch.json` đặt bên trong thư mục `.vscode` nằm ở thư mục gốc của `workspace`.
 ```json
 {	
 	"version": "0.2.0",
