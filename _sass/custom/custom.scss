@@ -1,36 +1,26 @@
-.highlight pre, 
-.rouge-code pre, 
-.rouge-code pre *, 
-.rouge-gutter, 
-.rouge-gutter pre, 
-.rouge-gutter pre *, 
-.lineno {
-    font-size: 1.125rem !important;  /* Giá trị tương ứng với $font-size-6 */
-    font-family: "SFMono-Regular", menlo, consolas, monospace !important;
-    line-height: 1.4 !important;
-}
-
-/* Đảm bảo rằng kích thước font và line-height đồng nhất giữa code và line number */
+/* Đồng bộ font-size và line-height cho line number và khối code */
+.highlight .table-wrapper td,
+.highlight .table-wrapper pre,
 .rouge-gutter,
 .rouge-code {
-    font-size: 14px; /* Đặt font-size chung cho cả line number và code */
-    line-height: 1.5; /* Đặt line-height chung để các dòng cách đều nhau */
-    font-family: 'Courier New', monospace; /* Chọn font chữ nhất quán, nên là monospace */
+    font-size: 14px; /* Kích thước font đồng bộ */
+    line-height: 1.5; /* Khoảng cách dòng đồng bộ */
+    font-family: 'Courier New', monospace; /* Font monospace nhất quán */
+    margin: 0;
+    padding: 0;
 }
 
-/* Đảm bảo sự căn chỉnh của bảng */
-.rouge-table {
+/* Đảm bảo line number và khối code căn chỉnh tốt trong bảng */
+.highlight .table-wrapper {
     border-spacing: 0;
 }
 
-/* Đảm bảo chiều rộng của ô line number khớp với chiều cao của ô code */
-.rouge-gutter pre,
-.rouge-code pre {
-    margin: 0;
-    padding: 0;
-    line-height: inherit; /* Thừa kế line-height để đồng bộ */
-    font-size: inherit; /* Thừa kế font-size để đồng bộ */
+/* Điều chỉnh khoảng cách trong ô line number */
+.highlight .table-wrapper td {
+    padding-right: 10px; /* Khoảng cách giữa line number và code */
+    vertical-align: top;
 }
+
 
 
 h1, h2, h3, h4, h5, h6 {
