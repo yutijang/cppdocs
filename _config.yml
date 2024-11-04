@@ -57,6 +57,8 @@ defaults:
   scope: {path: "collections/*"}
   values: {layout: default}  
 
+collections_dir: collections
+
 collections:
   vscode:
     permalink: "/:collection/:path/"
@@ -66,3 +68,4 @@ just_the_docs:
   collections:
     vscode:
       name: VSCODE
+      nav_fold: true
