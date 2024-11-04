@@ -3,22 +3,22 @@
 .highlight .table-wrapper pre,
 .rouge-gutter,
 .rouge-code {
-    font-size: 14px; /* Kích thước font đồng bộ */
-    line-height: 1.5; /* Khoảng cách dòng đồng bộ */
+    font-size: 1.2rem !important; /* Kích thước font đồng bộ */
+    line-height: 1.4 !important; /* Khoảng cách dòng đồng bộ */
     font-family: 'Courier New', monospace; /* Font monospace nhất quán */
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Đảm bảo line number và khối code căn chỉnh tốt trong bảng */
 .highlight .table-wrapper {
-    border-spacing: 0;
+    border-spacing: 0 !important;
 }
 
 /* Điều chỉnh khoảng cách trong ô line number */
 .highlight .table-wrapper td {
-    padding-right: 10px; /* Khoảng cách giữa line number và code */
-    vertical-align: top;
+    padding-right: 10px !important; /* Khoảng cách giữa line number và code */
+    vertical-align: top !important;
 }
 
 
