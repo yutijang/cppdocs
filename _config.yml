@@ -39,16 +39,16 @@ callouts:
   highlight:
     color: yellow
   important:
-    title: Important
+    title: Quan trọng  # Important
     color: blue
   new:
-    title: New
+    title: Mới  # New
     color: green
   note:
-    title: Note
+    title: Lưu ý  # Note
     color: purple
   warning:
-    title: Warning
+    title: Cảnh báo  # Warning
     color: red
 
 heading_anchors: true
