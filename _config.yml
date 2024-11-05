@@ -9,8 +9,6 @@ baseurl: /cppdocs
 
 nav_error_report: true
 
-show_breadcrumbs: true
-
 permalink: pretty
 
 author: yutijang
@@ -27,6 +25,13 @@ compress_html:
      envs: all
 
 nav_enabled: true
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
 
 back_to_top: true
 back_to_top_text: "Lên đầu trang"
