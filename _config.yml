@@ -53,6 +53,8 @@ callouts:
 
 heading_anchors: true
 
+color_scheme: light
+
 collections_dir: collections
 
 collections:
