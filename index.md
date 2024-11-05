@@ -14,3 +14,6 @@ New
 
 {: .important }
 Important
+
+<button onclick="jtd.setTheme('dark_custom')">Dark Mode</button>
+<button onclick="jtd.setTheme('light')">Light Mode</button>
