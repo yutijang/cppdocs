@@ -35,9 +35,7 @@ int arr[1000000]; // Có thể gây ra lỗi tràn bộ nhớ nếu kích thư�
    Cần lưu ý rằng hàm không biết kích thước của mảng. Nên truyền kích thước của mảng như một tham số bổ sung nếu cần.
 ```cpp
 void printArray(int arr[], int size) {
-for (int i = 0; i < size; ++i) {
-std::cout << arr[i] << " ";
-}
+    for (int i = 0; i < size; ++i) { std::cout << arr[i] << " "; }
 }
 ```
 **5. Phạm vi (Scope) của mảng** 
@@ -45,7 +43,7 @@ std::cout << arr[i] << " ";
    Mảng tĩnh được khởi tạo trong một hàm sẽ chỉ sống trong phạm vi của hàm đó. Khi ra khỏi hàm, mảng sẽ không còn tồn tại.
 ```cpp
 void func() {
-int arr[5]; // Mảng chỉ tồn tại trong hàm func
+    int arr[5]; // Mảng chỉ tồn tại trong hàm func
 } // Mảng arr không còn tồn tại tại đây
 ```
 **6. Sử dụng std::array thay cho mảng tĩnh**  
