@@ -50,33 +50,6 @@ div.highlighter-rouge > button {
     font-size: 0.95rem !important;
 }
 
-.custom-breadcrumb {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.breadcrumb-list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-.breadcrumb-item + .breadcrumb-item:before {
-  content: ">";
-  margin: 0 0.5rem;
-  color: #888; /* Màu sắc của dấu ngăn cách */
-}
-
-.breadcrumb-item a {
-  text-decoration: none;
-  color: #007bff; /* Màu liên kết */
-}
-
-.breadcrumb-item.active {
-  font-weight: bold;
-  color: #333; /* Màu của breadcrumb hiện tại */
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
 }
