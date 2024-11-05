@@ -5,7 +5,7 @@ layout: default
 nav_order: 1
 ---
 Nội dung file `.clang-format`, đặt tại thư mục gốc của workspace.
-<div class="no-line-number">
+<section class="no-line-number">
 ```
 ---
 
@@ -115,4 +115,4 @@ AlignTrailingComments:
 
 ---
 ```
-</div>
+</section>
