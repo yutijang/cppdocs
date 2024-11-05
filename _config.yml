@@ -24,19 +24,7 @@ compress_html:
    ignore:
      envs: all
 
-nav_enabled: true
-
-defaults:
-  - scope:
-      path: "docs" # an empty string here means all files in the project
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: "collections/_vscode" # an empty string here means all files in the project
-      type: "pages"
-    values:
-      layout: "default"      
+nav_enabled: true  
 
 back_to_top: true
 back_to_top_text: "Lên đầu trang"
