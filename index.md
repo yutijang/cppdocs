@@ -3,13 +3,14 @@ title: Home
 layout: default
 nav_order: 1
 ---
-Warning { .warning }
+{: .warning }
+Warning
 
-{ .note }
+{: .note }
 Note
 
-{ .new }
+{: .new }
 New
 
-{ .important }
+{: .important }
 Important
