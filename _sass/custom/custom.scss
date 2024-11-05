@@ -46,8 +46,12 @@ div.highlighter-rouge > button {
     margin: 1px 1px;
 }
 
-.no-line-number .rouge-gutter {
+.no-line-number .highlight .table-wrapper td.rouge-gutter {
     display: none;
+}
+
+.no-line-number .highlight .table-wrapper td.rouge-code {
+    padding-left: 0 !important;
 }
 
 .search-result-previews {
