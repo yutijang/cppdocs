@@ -3,8 +3,7 @@ title: Home
 layout: default
 nav_order: 1
 ---
-{ .warning }
-Warning
+Warning { .warning }
 
 { .note }
 Note
