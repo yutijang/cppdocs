@@ -46,6 +46,10 @@ div.highlighter-rouge > button {
     margin: 1px 1px;
 }
 
+.no-line-number .rouge-gutter {
+    display: none;
+}
+
 .search-result-previews {
     font-size: 0.95rem !important;
 }
