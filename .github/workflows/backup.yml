@@ -1,0 +1,26 @@
+name: Backup Website
+
+on:
+  schedule:
+    - cron: '0 20 * * *'  # Thực hiện vào lúc 03:00 UTC mỗi ngày
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git fetch origin main
+          git diff --quiet origin/main || echo "true" > changed.txt
+
+      - name: Create backup branch
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git checkout -b backup
+          git add .
+          git commit -m "Automated backup"
+          git push origin backup
