@@ -1,6 +1,6 @@
 ---
 title: Best practices
 parent: Home
-nav_order: 99
+nav_order: 3
 ---
 
