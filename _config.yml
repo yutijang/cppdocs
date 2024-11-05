@@ -9,6 +9,8 @@ baseurl: /cppdocs
 
 nav_error_report: true
 
+show_breadcrumbs: true
+
 permalink: pretty
 
 author: yutijang
