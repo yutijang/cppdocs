@@ -8,7 +8,7 @@ Nội dung file `launch.json`, đặt bên trong thư mục `.vscode` nằm ở 
 ```json
 {	
 	"version": "0.2.0",
-    "configurations": [
+	"configurations": [
         {
             "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
