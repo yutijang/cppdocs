@@ -4,6 +4,7 @@ layout: default
 parent: Containers
 nav_order: 1
 ---
+## array
 Mảng (tĩnh) được sử dụng để lưu trữ nhiều giá trị trong một biến duy nhất, thay vì khai báo các biến riêng biệt cho từng giá trị.
 ## Những điểm cần lưu ý:
 
