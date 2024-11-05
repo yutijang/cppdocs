@@ -4,7 +4,7 @@ layout: default
 parent: Cấu hình
 nav_order: 3
 ---
-Nội dung file `launch.json` đặt bên trong thư mục `.vscode` nằm ở thư mục gốc của `workspace`.
+Nội dung file `launch.json`, đặt bên trong thư mục `.vscode` nằm ở thư mục gốc của `workspace`.
 ```json
 {	
 	"version": "0.2.0",
