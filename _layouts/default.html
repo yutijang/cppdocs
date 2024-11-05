@@ -44,17 +44,7 @@ layout: table_wrappers
     {% include components/mermaid.html %}
   {% endif %}
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const theme = localStorage.getItem("theme") || "light";
-    jtd.setTheme(theme);
+<script src="{{ '/assets/js/toggle-theme.js' | relative_url }}"></script>
 
-    document.getElementById("toggle-theme").onclick = function() {
-        const newTheme = (theme === "light") ? "dark_custom" : "light";
-        jtd.setTheme(newTheme);
-        localStorage.setItem("theme", newTheme);
-    };
-});  
-</script>  
 </body>
 </html>
