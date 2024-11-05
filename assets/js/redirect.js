@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){let o=window.location.hash;if(o){let c={"#containers":"/cppdocs/docs/containers/#containers","#array":"/cppdocs/docs/array/#array","#vector":"/cppdocs/docs/vector/#vector"}[o];c?window.location.href=c:window.location.href="/cppdocs/404/"}});
