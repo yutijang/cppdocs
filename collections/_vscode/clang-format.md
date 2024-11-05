@@ -1,6 +1,5 @@
 ---
 title: .clang-format
-parent: vscode
 nav_order: 1
 ---
 Nội dung file `.clang-format` đặt tại thư mục gốc của workspace.
