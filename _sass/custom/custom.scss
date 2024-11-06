@@ -38,7 +38,11 @@
     padding-left: 15px !important;
 }
 
-div.highlighter-rouge div.highlight{
+div.highlighter-rouge > button {
+    width: 1rem !important;
+    border: 0.75rem solid #fafbf5;
+    background-color: #fafbf5 !important;
+    margin: 1px 1px;
     border-radius: 4px;
 }
 
