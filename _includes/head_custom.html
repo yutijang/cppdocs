@@ -1,1 +1,11 @@
 <script src="/cppdocs/assets/js/redirect.js"></script>
+
+<script>
+const reloadCSS = () => {
+  const links = document.querySelectorAll("link[rel='stylesheet']");
+  links.forEach(link => {
+    link.href = link.href.split("?")[0] + "?v=" + new Date().getTime();
+  });
+};
+reloadCSS();  
+</script>
