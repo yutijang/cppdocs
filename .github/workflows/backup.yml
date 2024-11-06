@@ -11,11 +11,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Setup git user
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
       - name: Check for changes
         id: changes
         run: |
           git fetch origin main
-          git diff --quiet origin/main || echo "true" > changed.txt
+          git diff --quiet origin/main || echo "::set-output name=changed::true"
 
       - name: Create backup branch
         if: steps.changes.outputs.changed == 'true'
