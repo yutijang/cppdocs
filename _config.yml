@@ -1,12 +1,13 @@
 title: cppdocs
 description: yutijang's archive cpp docs
 theme: just-the-docs
-remote_theme: "pmarsceill/just-the-docs"
 
 favicon_ico: "/assets/images/favicon.ico"
 
 url: https://yutijang.github.io
 baseurl: /cppdocs
+
+remote_theme: just-the-docs/just-the-docs@v0.10.0
 
 nav_error_report: true
 
