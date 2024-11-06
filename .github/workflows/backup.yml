@@ -3,14 +3,15 @@ name: Backup Website
 on:
   schedule:
     - cron: '0 20 * * *'  # Thực hiện vào lúc 03:00 UTC mỗi ngày
-  workflow_dispatch:  # Thêm dòng này để hỗ trợ chạy thủ công
+  workflow_dispatch:  # Thêm hỗ trợ chạy thủ công
 
 jobs:
   backup:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup git user
         run: |
@@ -21,17 +22,15 @@ jobs:
         id: changes
         run: |
           git fetch origin main
-          if git diff --quiet origin/main; then
-            echo "::set-output name=changed::false"
-          else
-            echo "::set-output name=changed::true"
-          fi
+          git diff --quiet origin/main || echo "changed=true" >> $GITHUB_ENV
 
-      - name: Create backup branch
-        if: steps.changes.outputs.changed == 'true'
+      - name: Debugging Output changed status
+        run: echo "Changed: ${{ env.changed }}"
+
+      - name: Create backup branch and push changes
+        if: env.changed == 'true'
         run: |
-          echo "Creating backup branch..."
           git checkout -b backup
-          git add .
-          git commit -m "Automated backup"
-          git push origin backup
+          git add -A
+          git commit -m "Automated backup of main branch"
+          git push -u origin backup --force
