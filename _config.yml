@@ -1,6 +1,7 @@
 title: cppdocs
 description: yutijang's archive cpp docs
 theme: just-the-docs
+remote_theme: "pmarsceill/just-the-docs"
 
 favicon_ico: "/assets/images/favicon.ico"
 
