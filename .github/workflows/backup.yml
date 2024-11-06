@@ -31,7 +31,7 @@ jobs:
       - name: Create backup branch and push changes
         if: env.changed == 'true'
         run: |
-          git checkout -b backup
+          git checkout -b backup || git checkout backup
           git add -A
           git commit -m "Automated backup of main branch"
-          git push -u origin backup --force
+          git push origin backup --force
