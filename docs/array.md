@@ -7,7 +7,7 @@ nav_order: 1
 ## array
 ---
 Mảng (tĩnh) được sử dụng để lưu trữ nhiều giá trị trong một biến duy nhất, thay vì khai báo các biến riêng biệt cho từng giá trị.
-## Những điểm cần lưu ý:
+## Những điểm cần lưu ý: {#nhung-diem-can-luu-y}
 
 **1. Kích thước cố định**  
    *Kích thước phải được xác định tại thời điểm biên dịch:*  
