@@ -1,1 +1,67 @@
+/* Thiết lập chung cho font-size */
+#back-to-top {
+    font-size: 0.85rem !important;
+}
 
+.breadcrumb-nav-list-item,
+.search-result-previews,
+.highlight .table-wrapper td,
+.highlight .table-wrapper pre,
+.rouge-gutter,
+.rouge-code {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+}
+
+body, p {
+    font-size: 1.1rem;
+}
+
+/* Thiết lập chung cho .highlight */
+.highlight {
+    padding: 0 !important;
+}
+
+.highlight .table-wrapper {
+    border-spacing: 0 !important;
+    background-color: #fafbf5 !important;
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.highlight .table-wrapper td {
+    padding-right: 15px !important;
+    vertical-align: top !important;
+}
+
+.highlight .table-wrapper .rouge-gutter {
+    border-right: 1px solid #e8e8e8 !important;
+    color: #b3b3b3;
+    padding-right: 15px !important;
+    user-select: none !important;
+    text-align: right !important;
+}
+
+.highlight .table-wrapper .rouge-code {
+    padding-left: 15px !important;
+}
+
+/* Thiết lập chung cho highlighter button */
+div.highlighter-rouge > button {
+    width: 1rem !important;
+    border: 0.75rem solid #fafbf5;
+    background-color: #fafbf5 !important;
+    margin: 1px;
+    border-radius: 4px;
+}
+
+div.highlighter-rouge div.highlight {
+    border-radius: 4px;
+}
