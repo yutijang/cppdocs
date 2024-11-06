@@ -5,7 +5,7 @@ parent: Cấu hình
 nav_order: 2
 ---
 Nội dung file `tasks.json`, đặt bên trong thư mục `.vscode` nằm ở thư mục gốc của `workspace`.
-```json
+```jsonc
 {
     "tasks": [
 //        {
@@ -27,15 +27,15 @@ Nội dung file `tasks.json`, đặt bên trong thư mục `.vscode` nằm ở t
             "label": "C/C++: g++.exe build active file with icon",
             "command": "g++",
             "args": [
-				"-Wall",
-				"-Wextra",
-				"-Wpedantic",
-				"-Werror",
-				"-std=c++20",
+		"-Wall",
+		"-Wextra",
+		"-Wpedantic",
+		"-Werror",
+		"-std=c++20",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-//				"icon.o",
+//		"icon.o",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
