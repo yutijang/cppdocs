@@ -3,6 +3,7 @@ name: Backup Website
 on:
   schedule:
     - cron: '0 20 * * *'  # Thực hiện vào lúc 03:00 UTC mỗi ngày
+  workflow_dispatch:  # Thêm dòng này để hỗ trợ chạy thủ công
 
 jobs:
   backup:
