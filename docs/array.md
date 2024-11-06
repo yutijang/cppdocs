@@ -40,7 +40,7 @@ void printArray(int arr[], int size) {
     for (int i = 0; i < size; ++i) { std::cout << arr[i] << " "; }
 }
 ```
-**5. Phạm vi (Scope) của mảng** 
+**5. Phạm vi (Scope) của mảng**  
    *Phạm vi sống:*  
    Mảng tĩnh được khởi tạo trong một hàm sẽ chỉ sống trong phạm vi của hàm đó. Khi ra khỏi hàm, mảng sẽ không còn tồn tại.
 ```cpp
@@ -48,9 +48,9 @@ void func() {
     int arr[5]; // Mảng chỉ tồn tại trong hàm func
 } // Mảng arr không còn tồn tại tại đây
 ```
-**6. Sử dụng std::array thay cho mảng tĩnh**  
+**6. Sử dụng `std::array` thay cho mảng tĩnh**  
    *Khuyến nghị:*  
-   Trong nhiều trường hợp, bạn nên sử dụng std::array từ thư viện STL thay vì mảng tĩnh, vì nó cung cấp nhiều tính năng tiện lợi như kiểm tra kích thước và an toàn kiểu.
+   Trong nhiều trường hợp, bạn nên sử dụng `std::array` từ thư viện STL thay vì mảng tĩnh, vì nó cung cấp nhiều tính năng tiện lợi như kiểm tra kích thước và an toàn kiểu.
 ```cpp
 #include <array>
 std::array<int, 5> arr; // Cung cấp an toàn và tính năng tốt hơn
