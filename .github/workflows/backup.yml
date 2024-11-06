@@ -27,7 +27,7 @@ jobs:
             echo "::set-output name=changed::true"
           fi
 
-      - name: Debugging: Output changed status
+      - name: Debugging Output changed status
         run: echo "Changed: ${{ steps.changes.outputs.changed }}"
 
       - name: Create backup branch
