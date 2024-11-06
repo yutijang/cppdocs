@@ -28,10 +28,13 @@ jobs:
             echo "changed=true" >> $GITHUB_ENV
           fi
 
-      - name: Create backup branch and push changes
+      - name: Create backup branch and sync changes
         if: env.changed == 'true'
         run: |
-          git checkout -b backup || git checkout backup
-          git add -A
-          git commit -m "Automated backup of main branch"
+          git checkout backup || git checkout -b backup
+          git rm -rf .  # Xóa toàn bộ nội dung cũ trong nhánh backup
+          git checkout main -- .  # Sao chép toàn bộ nội dung từ main
+          git commit -m "Automated full sync backup of main branch"
           git push origin backup --force
+
+
