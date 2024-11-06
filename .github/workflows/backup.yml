@@ -3,7 +3,7 @@ name: Backup Website
 on:
   schedule:
     - cron: '0 20 * * *'  # Thực hiện vào lúc 03:00 UTC mỗi ngày
-  workflow_dispatch:  # Thêm hỗ trợ chạy thủ công
+  workflow_dispatch:  # Hỗ trợ chạy thủ công
 
 jobs:
   backup:
@@ -28,13 +28,9 @@ jobs:
             echo "changed=true" >> $GITHUB_ENV
           fi
 
-      - name: Create backup branch and sync changes
+      - name: Sync backup branch with main
         if: env.changed == 'true'
         run: |
           git checkout backup || git checkout -b backup
-          git rm -rf .  # Xóa toàn bộ nội dung cũ trong nhánh backup
-          git checkout main -- .  # Sao chép toàn bộ nội dung từ main
-          git commit -m "Automated full sync backup of main branch"
+          git reset --hard origin/main  # Đồng bộ toàn bộ với nội dung từ main
           git push origin backup --force
-
-
