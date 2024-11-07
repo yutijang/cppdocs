@@ -9,15 +9,15 @@ has_toc: false
     <ul>
       <li><a href="/cppdocs/docs/containers/">Containers</a></li>
       <ul>
-        <li><a href="/cppdocs/docs/array">Array</a></li>
-        <li><a href="/cppdocs/docs/vector">Vector</a></li>
+        <li><a href="/cppdocs/docs/containers/array/">Array</a></li>
+        <li><a href="/cppdocs/docs/containers/vector/">Vector</a></li>
       </ul>
     </ul>
   </div>
   <div style="flex: 1; padding: 10px;">    
     <ul>
-      <li><a href="/cppdocs/docs/algorithms/sorting">Sorting</a></li>
-      <li><a href="/cppdocs/docs/algorithms/searching">Searching</a></li>
+      <li><a href="/cppdocs/docs/algorithms/sorting/">Sorting</a></li>
+      <li><a href="/cppdocs/docs/algorithms/searching/">Searching</a></li>
     </ul>
   </div>
 </div>
