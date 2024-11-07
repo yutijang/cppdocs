@@ -11,17 +11,18 @@ document.addEventListener("DOMContentLoaded", function() {
             // Đặt từ khóa vào ô tìm kiếm
             searchInput.value = hash;
 
-            // Tạo và dispatch sự kiện input
+            // Dispatch sự kiện input
             const inputEvent = new Event('input', { bubbles: true });
             searchInput.dispatchEvent(inputEvent);
 
-            // Kích hoạt sự kiện tìm kiếm của theme
-            if (typeof jtd !== "undefined" && typeof jtd.search !== "undefined" && typeof jtd.search.update === "function") {
-                jtd.search.update();
+            // Gọi hàm displaySearchResults để cập nhật kết quả tìm kiếm
+            if (typeof jtd !== "undefined" && typeof jtd.displaySearchResults === "function") {
+                jtd.displaySearchResults();
             } else {
-                console.warn("Hàm tìm kiếm không tìm thấy hoặc không được định nghĩa.");
+                console.warn("Hàm displaySearchResults không tìm thấy hoặc không được định nghĩa.");
             }
         }
     }
 });
+
 </script>
