@@ -3,27 +3,36 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
-    
+
     if (hash) {
         const searchInput = document.getElementById("search-input");
-        
+
         if (searchInput) {
             // Đặt từ khóa vào ô tìm kiếm
             searchInput.value = hash;
-            
-            // Sử dụng MutationObserver để theo dõi sự thay đổi của giá trị
-            const observer = new MutationObserver(() => {
-                const inputEvent = new Event('input', { bubbles: true });
-                searchInput.dispatchEvent(inputEvent);
-            });
 
-            // Theo dõi sự thay đổi trên thuộc tính `value` của ô tìm kiếm
-            observer.observe(searchInput, { attributes: true, attributeFilter: ['value'] });
-            
-            // Kích hoạt sự kiện ban đầu
+            // Tạo và dispatch sự kiện input
             const inputEvent = new Event('input', { bubbles: true });
             searchInput.dispatchEvent(inputEvent);
+
+            // Kích hoạt ô tìm kiếm bằng sự kiện focus
+            searchInput.focus();
+
+            // Kích hoạt ô tìm kiếm bằng sự kiện click
+            const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
+            searchInput.dispatchEvent(clickEvent);
+
+            // Kích hoạt ô tìm kiếm bằng sự kiện keyup
+            const keyUpEvent = new KeyboardEvent('keyup', {
+                bubbles: true,
+                cancelable: true,
+                key: 'Enter',
+                charCode: 13,
+                keyCode: 13
+            });
+            searchInput.dispatchEvent(keyUpEvent);
         }
     }
 });
+
 </script>
