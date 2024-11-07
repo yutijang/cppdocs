@@ -2,27 +2,28 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Lấy nội dung từ hash trong URL
     const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
     
     if (hash) {
-        // Lấy phần tử input search bằng ID
         const searchInput = document.getElementById("search-input");
         
         if (searchInput) {
-            // Đặt giá trị hash vào ô tìm kiếm
+            // Đặt từ khóa vào ô tìm kiếm
             searchInput.value = hash;
             
-            // Dùng setTimeout để đảm bảo focus xảy ra sau khi trang đã tải xong
-            setTimeout(() => {
-                searchInput.focus();
-                
-                // Kích hoạt sự kiện input để hệ thống tìm kiếm cập nhật kết quả
+            // Sử dụng MutationObserver để theo dõi sự thay đổi của giá trị
+            const observer = new MutationObserver(() => {
                 const inputEvent = new Event('input', { bubbles: true });
                 searchInput.dispatchEvent(inputEvent);
-            }, 100);  // Thời gian trễ 100ms
+            });
+
+            // Theo dõi sự thay đổi trên thuộc tính `value` của ô tìm kiếm
+            observer.observe(searchInput, { attributes: true, attributeFilter: ['value'] });
+            
+            // Kích hoạt sự kiện ban đầu
+            const inputEvent = new Event('input', { bubbles: true });
+            searchInput.dispatchEvent(inputEvent);
         }
     }
 });
-
 </script>
