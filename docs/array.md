@@ -59,7 +59,7 @@ int tensor[2][3][4]; // Mảng ba chiều 2x3x4.
 
   
 ## Những điểm cần lưu ý {#nhung-diem-can-luu-y}
-{: .btn-green }  
+{: .btn-green .p-2 .mb-4 .text-center}  
 
 **1. Kích thước cố định**  
    *Kích thước phải được xác định tại thời điểm biên dịch:*  
