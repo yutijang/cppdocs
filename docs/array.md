@@ -6,7 +6,14 @@ nav_order: 1
 ---
 ## array
 ---
-Mảng (tĩnh) được sử dụng để lưu trữ nhiều giá trị trong một biến duy nhất, thay vì khai báo các biến riêng biệt cho từng giá trị.  
+Mảng (Array) được sử dụng để lưu trữ nhiều giá trị trong một biến duy nhất, thay vì khai báo các biến riêng biệt cho từng giá trị.
+{: .fs-6 }  
+
+
+
+**Mảng tĩnh** (Static Array)  
+Mảng tĩnh có kích thước cố định và phải được biết trước, được khai báo và khởi tạo trong thời gian biên dịch (compile-time). Bộ nhớ cho mảng tĩnh được cấp phát trên stack.
+{: .note }  
 
 Các cách phổ biến khai báo và khởi tạo một mảng tĩnh:  
 **1. Khai báo mảng tĩnh không khởi tạo:**  
@@ -58,7 +65,7 @@ int tensor[2][3][4]; // Mảng ba chiều 2x3x4.
 ```
 
   
-## Những điểm cần lưu ý {#nhung-diem-can-luu-y}
+## Những điểm cần lưu ý {#nhung-diem-can-luu-y-static-array}
 {: .btn-green .p-2 .mb-4 .text-center}  
 
 **1. Kích thước cố định**  
@@ -107,3 +114,50 @@ void func() {
 #include <array>
 std::array<int, 5> arr; // Cung cấp an toàn và tính năng tốt hơn
 ```
+
+---
+
+
+**Mảng động** (Dynamic Array)  
+Mảng động là một mảng có kích thước được xác định và cấp phát trong thời gian chạy (runtime). Bộ nhớ cho mảng động được cấp phát trên heap bằng cách sử dụng từ khóa `new` và giải phóng bằng từ khóa `delete`.
+{: .note } 
+
+**Khai báo và khởi tạo mảng động một chiều**  
+```cpp
+int size = 5;
+int* arr = new int[size]; // Cấp phát mảng động với kích thước 'size'
+// Khởi tạo các phần tử của mảng
+for (int i = 0; i < size; ++i) {
+    arr[i] = i * 2; // Ví dụ: khởi tạo mảng với các giá trị là bội của 2
+}
+// Giải phóng bộ nhớ của mảng động
+delete[] arr;
+```
+
+**Khai báo và khởi tạo mảng động hai chiều (ma trận)**
+```cpp
+int rows = 3;
+int cols = 4;
+int** matrix = new int*[rows]; // Cấp phát mảng con trỏ cho các hàng
+for (int i = 0; i < rows; ++i) {
+    matrix[i] = new int[cols]; // Cấp phát mảng con trỏ cho các cột
+    for (int j = 0; j < cols; ++j) {
+        matrix[i][j] = i + j; // Ví dụ: khởi tạo ma trận với tổng chỉ số hàng và cột
+    }
+}
+// Giải phóng bộ nhớ của mảng động hai chiều
+for (int i = 0; i < rows; ++i) {
+    delete[] matrix[i]; // Giải phóng bộ nhớ của từng hàng
+}
+delete[] matrix; // Giải phóng bộ nhớ của mảng con trỏ
+```
+
+  
+## Những điểm cần lưu ý {#nhung-diem-can-luu-y-dynamic-array}
+{: .btn-green .p-2 .mb-4 .text-center}  
+**1. Cấp phát bộ nhớ động:**  
+Bộ nhớ cho mảng động được cấp phát bằng cách sử dụng từ khóa `new`. Điều này cho phép xác định kích thước của mảng khi chương trình đang chạy.  
+**2. Giải phóng bộ nhớ động:**  
+Bộ nhớ đã cấp phát cho mảng động cần phải được giải phóng thủ công bằng cách sử dụng từ khóa `delete[]` để tránh rò rỉ bộ nhớ.  
+**3. Kích thước linh hoạt:**  
+Có thể thay đổi kích thước của mảng động bằng cách cấp phát lại bộ nhớ mới với kích thước khác. Tuy nhiên, điều này yêu cầu việc sao chép dữ liệu từ mảng cũ sang mảng mới và giải phóng bộ nhớ cũ.
