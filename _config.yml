@@ -53,6 +53,9 @@ callouts:
 
 heading_anchors: true
 
+search:
+    focus_shortcut_key: 'k'
+
 collections_dir: collections
 
 collections:
