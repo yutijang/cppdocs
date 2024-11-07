@@ -17,9 +17,22 @@ document.addEventListener("DOMContentLoaded", function() {
             const inputEvent = new Event('input', { bubbles: true });
             searchInput.dispatchEvent(inputEvent);
 
-            // Kích hoạt cửa sổ tìm kiếm bằng cách thêm lớp 'search-active'
-            document.documentElement.classList.add('search-active');
+            // Đảm bảo hệ thống tìm kiếm được khởi tạo
+            if (typeof jtd !== "undefined" && typeof jtd.initSearch === "function") {
+                jtd.initSearch();
+                // Chờ một khoảng thời gian để dữ liệu tìm kiếm được tải
+                setTimeout(() => {
+                    if (typeof jtd.search !== "undefined" && typeof jtd.searchLoaded === "function") {
+                        jtd.searchLoaded(jtd.searchIndex, jtd.searchResults);
+                    }
+                    // Kích hoạt cửa sổ tìm kiếm bằng cách thêm lớp 'search-active'
+                    document.documentElement.classList.add('search-active');
+                }, 1000);  // Chờ 1 giây để đảm bảo dữ liệu tìm kiếm được tải
+            } else {
+                console.warn("Hàm initSearch không tìm thấy hoặc không được định nghĩa.");
+            }
         }
     }
 });
+
 </script>
