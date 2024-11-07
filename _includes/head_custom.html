@@ -1,1 +1,22 @@
-<script src="/cppdocs/assets/js/redirect.js"></script>
+//<script src="/cppdocs/assets/js/redirect.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Kiểm tra nếu có hash trong URL
+    const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
+    
+    if (hash) {
+        // Tìm ô tìm kiếm bằng ID
+        const searchInput = document.getElementById("search-input");
+        
+        if (searchInput) {
+            // Đặt giá trị hash vào ô tìm kiếm
+            searchInput.value = hash;
+            
+            // Kích hoạt sự kiện input để Just the Docs cập nhật kết quả tìm kiếm
+            const event = new Event('input', { bubbles: true });
+            searchInput.dispatchEvent(event);
+        }
+    }
+});  
+</script>
