@@ -2,31 +2,33 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
-    
-    if (hash) {
-        const searchInput = document.getElementById("search-input");
-        
-        if (searchInput) {
-            // Đặt từ khóa vào ô tìm kiếm
-            searchInput.value = hash;
-            
-            // Lấy phím tắt để focus vào ô tìm kiếm từ cấu hình
-            const focusShortcutKey = 'k';  // Sử dụng giá trị mặc định 'k', hoặc có thể lấy từ config file
+  // Lấy các phần tử cần thiết
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
 
-            // Mô phỏng việc nhấn phím Ctrl + focusShortcutKey (hoặc Command + focusShortcutKey trên macOS)
-            const event = new KeyboardEvent('keydown', {
-                bubbles: true,
-                cancelable: true,
-                key: focusShortcutKey,
-                ctrlKey: true,  // Giả lập Ctrl + phím tắt (cho Windows/Linux)
-                metaKey: true,  // Giả lập Command + phím tắt (cho macOS)
-            });
+  // Kiểm tra hash trong URL và nhập giá trị vào ô tìm kiếm
+  const urlHash = window.location.hash.substring(1); // Lấy nội dung sau dấu #
+  if (urlHash) {
+    searchInput.value = decodeURIComponent(urlHash);  // Đặt giá trị vào ô tìm kiếm
+  }
 
-            // Tạo sự kiện giả lập và dispatch cho document
-            document.dispatchEvent(event);
-        }
+  // Mô phỏng việc gọi hàm tìm kiếm khi có giá trị trong ô input
+  function search() {
+    console.log('Đang tìm kiếm với từ khóa: ', searchInput.value);
+    searchButton.click();  // Mô phỏng click nút tìm kiếm
+  }
+
+  // Lắng nghe sự kiện thay đổi nội dung trong ô tìm kiếm (input event)
+  jtd.addEvent(searchInput, 'input', function() {
+    const query = searchInput.value.trim();
+    if (query.length > 0) {
+      search();  // Gọi hàm tìm kiếm
     }
-});
+  });
 
+  // Nếu có giá trị trong ô tìm kiếm, tự động gọi hàm tìm kiếm
+  if (searchInput.value.trim().length > 0) {
+    search();  // Gọi tìm kiếm nếu có nội dung
+  }
+});
 </script>
