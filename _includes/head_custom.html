@@ -11,18 +11,23 @@ document.addEventListener("DOMContentLoaded", function() {
             // Đặt từ khóa vào ô tìm kiếm
             searchInput.value = hash;
 
-            // Dispatch sự kiện input
+            // Tạo và dispatch sự kiện input
             const inputEvent = new Event('input', { bubbles: true });
             searchInput.dispatchEvent(inputEvent);
 
-            // Gọi hàm displaySearchResults để cập nhật kết quả tìm kiếm
-            if (typeof jtd !== "undefined" && typeof jtd.displaySearchResults === "function") {
-                jtd.displaySearchResults();
-            } else {
-                console.warn("Hàm displaySearchResults không tìm thấy hoặc không được định nghĩa.");
-            }
+            // Sử dụng setTimeout để đảm bảo sự kiện đã được xử lý
+            setTimeout(() => {
+                // Dispatch sự kiện input lần nữa để chắc chắn
+                searchInput.dispatchEvent(inputEvent);
+
+                // Kích hoạt lại hàm hiển thị kết quả tìm kiếm nếu nó có sẵn
+                if (typeof jtd !== "undefined" && typeof jtd.displaySearchResults === "function") {
+                    jtd.displaySearchResults();
+                } else {
+                    console.warn("Hàm displaySearchResults không tìm thấy hoặc không được định nghĩa.");
+                }
+            }, 500);  // Thời gian chờ để đảm bảo sự kiện đã được xử lý
         }
     }
 });
-
 </script>
