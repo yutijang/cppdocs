@@ -17,18 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const inputEvent = new Event('input', { bubbles: true });
             searchInput.dispatchEvent(inputEvent);
 
-            // Sử dụng setTimeout để đảm bảo sự kiện đã được xử lý
-            setTimeout(() => {
-                // Dispatch sự kiện input lần nữa để chắc chắn
-                searchInput.dispatchEvent(inputEvent);
-
-                // Kích hoạt lại hàm hiển thị kết quả tìm kiếm nếu nó có sẵn
-                if (typeof jtd !== "undefined" && typeof jtd.displaySearchResults === "function") {
-                    jtd.displaySearchResults();
-                } else {
-                    console.warn("Hàm displaySearchResults không tìm thấy hoặc không được định nghĩa.");
-                }
-            }, 1500);  // Thời gian chờ để đảm bảo sự kiện đã được xử lý
+            // Kích hoạt cửa sổ tìm kiếm bằng cách thêm lớp 'search-active'
+            document.documentElement.classList.add('search-active');
         }
     }
 });
