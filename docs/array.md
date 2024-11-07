@@ -166,9 +166,8 @@ std::vector<int> vec; // Khai báo mảng động sử dụng std::vector
 vec.push_back(1); // Thêm phần tử vào cuối mảng
 vec.push_back(2);
 ```
-
-
   
+  <br><br>
 **Ví dụ**
 ```cpp
 #include <iostream>
