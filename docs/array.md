@@ -57,9 +57,9 @@ int matrix2[3][4] = {
 int tensor[2][3][4]; // Mảng ba chiều 2x3x4.
 ```
 
-  
+<span class="btn btn-green">  
 ### Những điểm cần lưu ý {#nhung-diem-can-luu-y}
-{: .btn-green }
+</span>
 **1. Kích thước cố định**  
    *Kích thước phải được xác định tại thời điểm biên dịch:*  
    Kích thước của mảng tĩnh phải là một hằng số hoặc một hằng số toàn cục.
