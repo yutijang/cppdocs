@@ -2,8 +2,8 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Lấy nội dung hash từ URL
-    const hash = window.location.hash.substring(1);  // Loại bỏ dấu #
+    // Lấy nội dung từ hash trong URL
+    const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
     
     if (hash) {
         // Lấy phần tử input search bằng ID
@@ -13,13 +13,16 @@ document.addEventListener("DOMContentLoaded", function() {
             // Đặt giá trị hash vào ô tìm kiếm
             searchInput.value = hash;
             
-            // Kích hoạt sự kiện input và keyup để Just the Docs cập nhật kết quả tìm kiếm
-            const inputEvent = new Event('input', { bubbles: true });
-            searchInput.dispatchEvent(inputEvent);
-            
-            const keyupEvent = new KeyboardEvent('keyup', { bubbles: true, key: 'Enter' });
-            searchInput.dispatchEvent(keyupEvent);
+            // Dùng setTimeout để đảm bảo focus xảy ra sau khi trang đã tải xong
+            setTimeout(() => {
+                searchInput.focus();
+                
+                // Kích hoạt sự kiện input để hệ thống tìm kiếm cập nhật kết quả
+                const inputEvent = new Event('input', { bubbles: true });
+                searchInput.dispatchEvent(inputEvent);
+            }, 100);  // Thời gian trễ 100ms
         }
     }
 });
+
 </script>
