@@ -12,6 +12,8 @@ Mảng (Array) được sử dụng để lưu trữ nhiều giá trị trong m�
 
 
 **Mảng tĩnh** (Static Array)  
+
+  
 Mảng tĩnh có kích thước cố định và phải được biết trước, được khai báo và khởi tạo trong thời gian biên dịch (compile-time). Bộ nhớ cho mảng tĩnh được cấp phát trên stack.
 {: .note }  
 
