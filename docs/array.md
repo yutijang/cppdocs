@@ -122,6 +122,8 @@ std::array<int, 5> arr; // Cung cấp an toàn và tính năng tốt hơn
 
 
 **Mảng động** (Dynamic Array)  
+
+  
 Mảng động là một mảng có kích thước được xác định và cấp phát trong thời gian chạy (runtime). Bộ nhớ cho mảng động được cấp phát trên heap bằng cách sử dụng từ khóa `new` và giải phóng bằng từ khóa `delete`.
 {: .note } 
 
@@ -165,6 +167,8 @@ vec.push_back(1); // Thêm phần tử vào cuối mảng
 vec.push_back(2);
 ```
 
+
+  
 **Ví dụ**
 ```cpp
 #include <iostream>
@@ -235,7 +239,9 @@ int main() {
 {: .btn-green .p-2 .mb-4 .text-center}  
 **1. Cấp phát bộ nhớ động:**  
 Bộ nhớ cho mảng động được cấp phát bằng cách sử dụng từ khóa `new`. Điều này cho phép xác định kích thước của mảng khi chương trình đang chạy.  
+  
 **2. Giải phóng bộ nhớ động:**  
 Bộ nhớ đã cấp phát cho mảng động cần phải được giải phóng thủ công bằng cách sử dụng từ khóa `delete[]` để tránh rò rỉ bộ nhớ.  
+  
 **3. Kích thước linh hoạt:**  
 Có thể thay đổi kích thước của mảng động bằng cách cấp phát lại bộ nhớ mới với kích thước khác. Tuy nhiên, điều này yêu cầu việc sao chép dữ liệu từ mảng cũ sang mảng mới và giải phóng bộ nhớ cũ.
