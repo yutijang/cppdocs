@@ -1,9 +1,3 @@
----
-title: array
-layout: default
-parent: Containers
-nav_order: 1
----
 ## array
 ---
 Mảng (Array) được sử dụng để lưu trữ nhiều giá trị trong một biến duy nhất, thay vì khai báo các biến riêng biệt cho từng giá trị.
