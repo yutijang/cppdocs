@@ -2,41 +2,26 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Lấy các phần tử cần thiết
-  const searchInput = document.getElementById('search-input');
-  const searchButton = document.getElementById('search-button');
+    const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
 
-  // Kiểm tra hash trong URL và nhập giá trị vào ô tìm kiếm
-  const urlHash = window.location.hash.substring(1); // Lấy nội dung sau dấu #
-  if (urlHash) {
-    searchInput.value = decodeURIComponent(urlHash);  // Đặt giá trị vào ô tìm kiếm
-  }
+    if (hash) {
+        const searchInput = document.getElementById("search-input");
 
-  // Mô phỏng việc gọi hàm tìm kiếm khi có giá trị trong ô input
-  function search() {
-    console.log('Đang tìm kiếm với từ khóa: ', searchInput.value);
-    searchButton.click();  // Mô phỏng click nút tìm kiếm
-  }
+        if (searchInput) {
+            // Đặt từ khóa vào ô tìm kiếm
+            searchInput.value = hash;
 
-  // Hàm thực hiện tìm kiếm với một delay
-  function searchWithDelay() {
-    setTimeout(function() {
-      search();  // Gọi hàm tìm kiếm sau một khoảng thời gian
-    }, 500); // Khoảng delay 500ms
-  }
+            // Tạo và dispatch sự kiện input
+            const inputEvent = new Event('input', { bubbles: true });
+            searchInput.dispatchEvent(inputEvent);
 
-  // Lắng nghe sự kiện thay đổi nội dung trong ô tìm kiếm (input event)
-  jtd.addEvent(searchInput, 'input', function() {
-    const query = searchInput.value.trim();
-    if (query.length > 0) {
-      searchWithDelay();  // Gọi tìm kiếm với delay
+            // Kích hoạt sự kiện tìm kiếm của theme
+            if (typeof jtd !== "undefined" && typeof jtd.search !== "undefined" && typeof jtd.search.update === "function") {
+                jtd.search.update();
+            } else {
+                console.warn("Hàm tìm kiếm không tìm thấy hoặc không được định nghĩa.");
+            }
+        }
     }
-  });
-
-  // Nếu có giá trị trong ô tìm kiếm, tự động gọi hàm tìm kiếm
-  if (searchInput.value.trim().length > 0) {
-    searchWithDelay();  // Gọi tìm kiếm nếu có nội dung
-  }
 });
-
 </script>
