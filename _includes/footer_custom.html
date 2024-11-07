@@ -1,3 +1,35 @@
 {%- if site.footer_content -%}
   <p class="text-small text-grey-dk-100 mb-0">{{ site.footer_content }}</p>
 {%- endif -%}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
+
+    if (hash) {
+        const searchInput = document.getElementById("search-input");
+
+        if (searchInput) {
+            // Đặt từ khóa vào ô tìm kiếm
+            searchInput.value = hash;
+
+            // Tạo và dispatch sự kiện input
+            const inputEvent = new Event('input', { bubbles: true });
+            searchInput.dispatchEvent(inputEvent);
+
+            // Sử dụng setTimeout để đảm bảo sự kiện đã được xử lý
+            setTimeout(() => {
+                // Dispatch sự kiện input lần nữa để chắc chắn
+                searchInput.dispatchEvent(inputEvent);
+
+                // Kích hoạt lại hàm hiển thị kết quả tìm kiếm nếu nó có sẵn
+                if (typeof jtd !== "undefined" && typeof jtd.displaySearchResults === "function") {
+                    jtd.displaySearchResults();
+                } else {
+                    console.warn("Hàm displaySearchResults không tìm thấy hoặc không được định nghĩa.");
+                }
+            }, 1500);  // Thời gian chờ để đảm bảo sự kiện đã được xử lý
+        }
+    }
+});
+</script>
