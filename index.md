@@ -4,22 +4,22 @@ layout: default
 nav_order: 1
 has_toc: false
 ---
-
-# Trang chủ
-
 <div style="display: flex;">
   <div style="flex: 1; padding: 10px;">
-    ## Mục lục - Cột 1
-
-    ### [Containers](https://yutijang.github.io/cppdocs/docs/containers/)
-    - [Array](https://yutijang.github.io/cppdocs/docs/containers/array)
-    - [Vector](https://yutijang.github.io/cppdocs/docs/containers/vector)
+    <h2>Mục lục - Cột 1</h2>
+    <ul>
+      <li><a href="https://yutijang.github.io/cppdocs/docs/containers/">Containers</a></li>
+      <ul>
+        <li><a href="https://yutijang.github.io/cppdocs/docs/containers/array">Array</a></li>
+        <li><a href="https://yutijang.github.io/cppdocs/docs/containers/vector">Vector</a></li>
+      </ul>
+    </ul>
   </div>
   <div style="flex: 1; padding: 10px;">
-    ## Mục lục - Cột 2
-
-    <!-- Thêm các liên kết khác ở đây -->
-    - [Sorting](https://yutijang.github.io/cppdocs/docs/algorithms/sorting)
-    - [Searching](https://yutijang.github.io/cppdocs/docs/algorithms/searching)
+    <h2>Mục lục - Cột 2</h2>
+    <ul>
+      <li><a href="https://yutijang.github.io/cppdocs/docs/algorithms/sorting">Sorting</a></li>
+      <li><a href="https://yutijang.github.io/cppdocs/docs/algorithms/searching">Searching</a></li>
+    </ul>
   </div>
 </div>
