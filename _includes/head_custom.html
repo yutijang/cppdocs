@@ -3,26 +3,28 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
-
+    
     if (hash) {
         const searchInput = document.getElementById("search-input");
-
+        
         if (searchInput) {
             // Đặt từ khóa vào ô tìm kiếm
             searchInput.value = hash;
+            
+            // Lấy phím tắt để focus vào ô tìm kiếm từ cấu hình
+            const focusShortcutKey = 'k';  // Sử dụng giá trị mặc định 'k', hoặc có thể lấy từ config file
 
-            // Tạo và dispatch sự kiện input
-            const inputEvent = new Event('input', { bubbles: true });
-            searchInput.dispatchEvent(inputEvent);
+            // Mô phỏng việc nhấn phím Ctrl + focusShortcutKey (hoặc Command + focusShortcutKey trên macOS)
+            const event = new KeyboardEvent('keydown', {
+                bubbles: true,
+                cancelable: true,
+                key: focusShortcutKey,
+                ctrlKey: true,  // Giả lập Ctrl + phím tắt (cho Windows/Linux)
+                metaKey: true,  // Giả lập Command + phím tắt (cho macOS)
+            });
 
-            // Tạo interval để kiểm tra và kích hoạt sự kiện input cho đến khi nội dung hiển thị
-            const intervalId = setInterval(() => {
-                // Dispatch sự kiện input để hệ thống tìm kiếm cập nhật
-                searchInput.dispatchEvent(inputEvent);
-            }, 200); // Thời gian giữa các lần kích hoạt
-
-            // Dừng kích hoạt sau một khoảng thời gian
-            setTimeout(() => clearInterval(intervalId), 2000);  // Dừng sau 2 giây
+            // Tạo sự kiện giả lập và dispatch cho document
+            document.dispatchEvent(event);
         }
     }
 });
