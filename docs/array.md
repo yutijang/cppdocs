@@ -15,6 +15,7 @@ Mảng (Array) được sử dụng để lưu trữ nhiều giá trị trong m�
 Mảng tĩnh có kích thước cố định và phải được biết trước, được khai báo và khởi tạo trong thời gian biên dịch (compile-time). Bộ nhớ cho mảng tĩnh được cấp phát trên stack.
 {: .note }  
 
+  
 Các cách phổ biến khai báo và khởi tạo một mảng tĩnh:  
 **1. Khai báo mảng tĩnh không khởi tạo:**  
 ```cpp
@@ -122,6 +123,7 @@ std::array<int, 5> arr; // Cung cấp an toàn và tính năng tốt hơn
 Mảng động là một mảng có kích thước được xác định và cấp phát trong thời gian chạy (runtime). Bộ nhớ cho mảng động được cấp phát trên heap bằng cách sử dụng từ khóa `new` và giải phóng bằng từ khóa `delete`.
 {: .note } 
 
+Các cách phổ biến khai báo và khởi tạo một mảng động:    
 **Khai báo và khởi tạo mảng động một chiều**  
 ```cpp
 int size = 5;
@@ -152,6 +154,80 @@ for (int i = 0; i < rows; ++i) {
 delete[] matrix; // Giải phóng bộ nhớ của mảng con trỏ
 ```
 
+**Sử dụng `std::vector` để quản lý mảng động:**  
+```cpp
+#include <vector>
+
+std::vector<int> vec; // Khai báo mảng động sử dụng std::vector
+vec.push_back(1); // Thêm phần tử vào cuối mảng
+vec.push_back(2);
+```
+
+**Ví dụ**
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Khai báo mảng động một chiều
+    int size = 5;
+    int* arr = new int[size]{1, 2, 3, 4, 5};
+    
+    // In mảng động một chiều
+    cout << "Mảng động một chiều: ";
+    for (int i = 0; i < size; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    // Giải phóng bộ nhớ của mảng động một chiều
+    delete[] arr;
+    
+    // Khai báo và khởi tạo mảng động hai chiều
+    int rows = 3;
+    int cols = 4;
+    int** matrix = new int*[rows];
+    for (int i = 0; i < rows; ++i) {
+        matrix[i] = new int[cols];
+        for (int j = 0; j < cols; ++j) {
+            matrix[i][j] = i + j; // Khởi tạo các giá trị trong ma trận
+        }
+    }
+    
+    // In mảng động hai chiều
+    cout << "Mảng động hai chiều:" << endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    // Giải phóng bộ nhớ của mảng động hai chiều
+    for (int i = 0; i < rows; ++i) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+    
+    // Sử dụng std::vector để quản lý mảng động
+    std::vector<int> vec;
+    vec.push_back(1);
+    vec.push_back(2);
+    vec.push_back(3);
+    
+    // In std::vector
+    cout << "std::vector: ";
+    for (int i = 0; i < vec.size(); ++i) {
+        cout << vec[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+```
+
+  
   
 ## Những điểm cần lưu ý {#nhung-diem-can-luu-y-dynamic-array}
 {: .btn-green .p-2 .mb-4 .text-center}  
