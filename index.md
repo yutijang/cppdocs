@@ -7,10 +7,10 @@ has_toc: false
 <div style="display: flex;">
   <div style="flex: 1; padding: 10px;">    
     <ul>
-      <li><a href="/cppdocs/docs/containers/">Containers</a></li>
+      <li><a href="/cppdocs/docs/containers">Containers</a></li>
       <ul>
-        <li><a href="/cppdocs/docs/containers/array/">Array</a></li>
-        <li><a href="/cppdocs/docs/containers/vector/">Vector</a></li>
+        <li><a href="/cppdocs/docs/containers/array">array</a></li>
+        <li><a href="/cppdocs/docs/containers/vector">vector</a></li>
       </ul>
     </ul>
   </div>
