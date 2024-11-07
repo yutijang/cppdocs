@@ -18,17 +18,25 @@ document.addEventListener("DOMContentLoaded", function() {
     searchButton.click();  // Mô phỏng click nút tìm kiếm
   }
 
+  // Hàm thực hiện tìm kiếm với một delay
+  function searchWithDelay() {
+    setTimeout(function() {
+      search();  // Gọi hàm tìm kiếm sau một khoảng thời gian
+    }, 500); // Khoảng delay 500ms
+  }
+
   // Lắng nghe sự kiện thay đổi nội dung trong ô tìm kiếm (input event)
   jtd.addEvent(searchInput, 'input', function() {
     const query = searchInput.value.trim();
     if (query.length > 0) {
-      search();  // Gọi hàm tìm kiếm
+      searchWithDelay();  // Gọi tìm kiếm với delay
     }
   });
 
   // Nếu có giá trị trong ô tìm kiếm, tự động gọi hàm tìm kiếm
   if (searchInput.value.trim().length > 0) {
-    search();  // Gọi tìm kiếm nếu có nội dung
+    searchWithDelay();  // Gọi tìm kiếm nếu có nội dung
   }
 });
+
 </script>
