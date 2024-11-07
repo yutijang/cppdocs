@@ -2,21 +2,24 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Kiểm tra nếu có hash trong URL
+    // Lấy nội dung từ hash trong URL
     const hash = window.location.hash.substring(1);  // Lấy phần sau dấu #
     
     if (hash) {
-        // Tìm ô tìm kiếm bằng ID
+        // Lấy phần tử input search bằng ID
         const searchInput = document.getElementById("search-input");
         
         if (searchInput) {
             // Đặt giá trị hash vào ô tìm kiếm
             searchInput.value = hash;
             
-            // Kích hoạt sự kiện input để Just the Docs cập nhật kết quả tìm kiếm
-            const event = new Event('input', { bubbles: true });
-            searchInput.dispatchEvent(event);
+            // Focus vào ô tìm kiếm để kích hoạt hiển thị kết quả
+            searchInput.focus();
+            
+            // Kích hoạt thêm sự kiện input để Just the Docs cập nhật kết quả tìm kiếm
+            const inputEvent = new Event('input', { bubbles: true });
+            searchInput.dispatchEvent(inputEvent);
         }
     }
-});  
+});
 </script>
