@@ -15,22 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const inputEvent = new Event('input', { bubbles: true });
             searchInput.dispatchEvent(inputEvent);
 
-            // Kích hoạt ô tìm kiếm bằng sự kiện focus
-            searchInput.focus();
+            // Tạo interval để kiểm tra và kích hoạt sự kiện input cho đến khi nội dung hiển thị
+            const intervalId = setInterval(() => {
+                // Dispatch sự kiện input để hệ thống tìm kiếm cập nhật
+                searchInput.dispatchEvent(inputEvent);
+            }, 200); // Thời gian giữa các lần kích hoạt
 
-            // Kích hoạt ô tìm kiếm bằng sự kiện click
-            const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
-            searchInput.dispatchEvent(clickEvent);
-
-            // Kích hoạt ô tìm kiếm bằng sự kiện keyup
-            const keyUpEvent = new KeyboardEvent('keyup', {
-                bubbles: true,
-                cancelable: true,
-                key: 'Enter',
-                charCode: 13,
-                keyCode: 13
-            });
-            searchInput.dispatchEvent(keyUpEvent);
+            // Dừng kích hoạt sau một khoảng thời gian
+            setTimeout(() => clearInterval(intervalId), 2000);  // Dừng sau 2 giây
         }
     }
 });
