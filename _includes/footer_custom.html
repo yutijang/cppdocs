@@ -3,18 +3,31 @@
 {%- endif -%}
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   const searchInput = document.getElementById('search-input');
+  const urlHash = window.location.hash.substring(1);
 
-  const urlHash = window.location.hash.substring(1); 
   if (urlHash) {
-    searchInput.value = decodeURIComponent(urlHash); 
+    searchInput.focus(); // Đưa con trỏ vào ô tìm kiếm
 
-    // Kích hoạt chuỗi sự kiện
-    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-    searchInput.dispatchEvent(new Event('change', { bubbles: true }));
+    // Hàm nhập từng ký tự
+    function typeText(element, text) {
+      text.split('').forEach((char) => {
+        const keydownEvent = new KeyboardEvent('keydown', { bubbles: true, key: char });
+        const keypressEvent = new KeyboardEvent('keypress', { bubbles: true, key: char });
+        const inputEvent = new InputEvent('input', { bubbles: true, inputType: 'insertText', data: char });
+        const keyupEvent = new KeyboardEvent('keyup', { bubbles: true, key: char });
+
+        element.dispatchEvent(keydownEvent);
+        element.dispatchEvent(keypressEvent);
+        element.value += char; // Thêm ký tự vào ô tìm kiếm
+        element.dispatchEvent(inputEvent);
+        element.dispatchEvent(keyupEvent);
+      });
+    }
+
+    typeText(searchInput, decodeURIComponent(urlHash)); // Nhập nội dung từ URL vào ô tìm kiếm
   }
 });
-
 
 </script>
