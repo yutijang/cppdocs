@@ -1,3 +1,19 @@
 {%- if site.footer_content -%}
   <p class="text-small text-grey-dk-100 mb-0">{{ site.footer_content }}</p>
 {%- endif -%}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById('search-input');
+
+  const urlHash = window.location.hash.substring(1); 
+  if (urlHash) {
+    searchInput.value = decodeURIComponent(urlHash); 
+
+    // Tạo và gửi sự kiện input để kích hoạt search
+    const inputEvent = new Event('input', { bubbles: true });
+    searchInput.dispatchEvent(inputEvent);
+  }
+});
+  
+</script>
