@@ -6,14 +6,14 @@
 document.addEventListener("DOMContentLoaded", function() {
   const searchInput = document.getElementById('search-input');
 
-  const urlHash = window.location.hash.substring(1); 
+  const urlHash = window.location.hash.substring(1);
   if (urlHash) {
-    searchInput.value = decodeURIComponent(urlHash); 
+    searchInput.value = decodeURIComponent(urlHash);
 
-    // Tạo và gửi sự kiện input để kích hoạt search
-    const inputEvent = new Event('input', { bubbles: true });
-    searchInput.dispatchEvent(inputEvent);
+    // Tạo và gửi sự kiện keyup để kích hoạt search
+    const keyUpEvent = new KeyboardEvent('keyup', { bubbles: true, key: 'Enter' });
+    searchInput.dispatchEvent(keyUpEvent);
   }
 });
-  
+
 </script>
