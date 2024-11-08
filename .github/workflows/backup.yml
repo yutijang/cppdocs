@@ -17,17 +17,22 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          
+
+      - name: Fetch all branches
+        run: |
+          git fetch origin main:refs/remotes/origin/main
+          git fetch origin backup:refs/remotes/origin/backup || echo "No backup branch found"
+
       - name: Check for changes
         id: changes
         run: |
-          git fetch origin main:refs/remotes/origin/main
-          if git diff --quiet HEAD..origin/main; then
+          # So sánh nhánh `main` với `backup`
+          if git diff --quiet origin/backup..origin/main; then
             echo "changed=false" >> $GITHUB_ENV
           else
             echo "changed=true" >> $GITHUB_ENV
           fi
-          
+
       - name: Sync backup branch with main
         if: env.changed == 'true'
         run: |
